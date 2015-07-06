@@ -48,7 +48,7 @@
 			<nav role="navigation">
 				<div class="site-nav__connect">
 					<div class="contact">
-						<a href="mailto:coopcreamery@seward.coop">Contact</a>
+						<a href="<?php echo get_permalink( 157 ); ?>">Contact</a>
 					</div>
 					<div class="social-links">
 						<a href="#"><svg role="img" aria-label="Twitter" version="1.1" id="Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px"
@@ -64,13 +64,14 @@
 						</ul>
 					</div>
 				</div>
-				
-					<?php wp_page_menu( array(
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'site-nav__links', ) ); ?>
+					
+					<!-- <?php wp_page_menu( array(
 						'depth' => 1,
 						'sort_column' => 'menu_order',
 						'menu_class' => 'site-nav__links',
 						'exclude' => 10) );
-					?>
+					?> -->
 
 			</nav>
 		</div>

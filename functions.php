@@ -40,11 +40,6 @@ function creamerycafe_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'creamerycafe' ),
-	) );
-
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -98,8 +93,8 @@ function creamerycafe_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'creamerycafe_widgets_init' );
@@ -141,7 +136,7 @@ function theme_typekit_inline() {
 add_action( 'wp_head', 'theme_typekit_inline' );
 
 /**
- * Typekit Fonts
+ * Child pages in navigation
  */
 function list_child_pages() { 
 
@@ -159,6 +154,20 @@ global $post;
 echo $string;
 
 }
+
+/**
+ * Setup menus.
+ */
+function register_menu() {
+  register_nav_menu( 'primary', __( 'Primary Menu' ) );
+}
+add_action( 'init', 'register_menu' );
+
+
+/**
+ * Remove welcome panel.
+ */
+remove_action( 'welcome_panel', 'wp_welcome_panel' );
 
 /**
  * Custom template tags for this theme.

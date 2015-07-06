@@ -272,10 +272,15 @@ th {
     #SETTINGS
 \*====================================*/
 
+* {
+	margin: 0;
+}
+
 html {
     font-size: 62.5%;
     line-height: 1.5;
 	box-sizing: border-box;
+	height: 100%;
 }
 
 *,
@@ -291,6 +296,7 @@ body {
 	font-family: "Bitter", "proxima-nova", Arial, sans-serif;
 	background-color: #fff;
 	color: #444;
+	height: 100%;
 }
 
 ::-moz-selection {
@@ -354,7 +360,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 4rem;
   margin-bottom: 1rem;
   font-weight: 300;
-  color: rgb(140,171,170); /* Blue */
+  color: #244E5A; /* Deep Blue */
   clear: both;
 }
 
@@ -454,12 +460,12 @@ img {
 }
 
 a {
-	color: rgb(140,171,170); /* Blue */
+	color: #8CABAA; /* Sky Blue */
 	text-decoration: underline;
 }
 
 a:visited {
-	color: rgb(36,78,90);  /* dark blue */
+	color: #244E5A;  /* Deep Blue */
 }
 
 a:hover,
@@ -481,11 +487,24 @@ a:active {
     #GENERAL STRUCTURE 
 \*====================================*/
 
+* {
+	margin: 0;
+}
 
 .page-wrapper {
-	position: relative;
 	max-width: 960px;
 	margin: 0 auto;
+	min-height: 100%;
+	margin-bottom: -74px;  /* equal to footer height */
+	background-color: #fffcf2;
+	-moz-box-shadow: 0 220px 40px rgba(0,0,0,0.15);
+		-webkit-box-shadow: 0 220px 40px rgba(0,0,0,0.15);
+			box-shadow: 0 220px 40px rgba(0,0,0,0.15);
+}
+
+.page-wrapper:after {
+	content: "";
+	display: block;
 }
 
 .container {
@@ -493,7 +512,7 @@ a:active {
 	padding: 0 30px;
 	box-sizing: border-box;
 	}
-  
+
 .column,
 .columns {
   width: 100%;
@@ -502,14 +521,12 @@ a:active {
 }
 
 .content-wrapper {
-	background-color: #fffcf2;
-	-moz-box-shadow: 0 0 40px rgba(0,0,0,0.15);
-		-webkit-box-shadow: 0 0 40px rgba(0,0,0,0.15);
-			box-shadow: 0 0 40px rgba(0,0,0,0.15);
+	position: relative;
 } 
 
-
-
+.main-content {
+	padding: 2.5em 0;
+}
 
 /*====================================*\
     #NAVIGATION
@@ -530,7 +547,7 @@ a:active {
 .site-nav {
 	position: relative;
 	margin: 0 auto;
-	background-color: rgb(140,171,170); /* Blue */
+	background-color: #8CABAA; /* Sky Blue */
 	text-align: center;
 }
 
@@ -599,11 +616,33 @@ a:active {
 	display: block;
 	padding: 10px 16px;
 	text-decoration: none;
+	position: relative;
 }
+
+.contact a:hover:before{
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 15%;
+	right: 15%;
+	border: 1px solid #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.contact a:hover:after{
+	content: '';
+	position: absolute;
+	bottom: 10px;
+	left: 15%;
+	right: 15%;
+	border: 1px solid #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
 
 .inner-nav {
 	position: relative;
-	background-color: #248089;
+	background-color: #248089; /* Antique Blue */
 }
 
 .inner-nav__list {
@@ -629,7 +668,7 @@ a:active {
 	content: '';
 	position: absolute;
 	display: block;
-	border-left: 2px solid rgb(140,171,170); /* Blue */
+	border-left: 2px solid #8CABAA; /* Sky Blue */
 	top: 10%;
 	left: 0;
 	height: 60%;
@@ -644,7 +683,7 @@ a:active {
 
 .inner-nav a, .inner-nav__item a:visited {
 	vertical-align: bottom;
-	color: rgb(140,171,170); /* Blue */
+	color: #8CABAA; /* Sky Blue */
 }
 
 .inner-nav a:hover {
@@ -654,7 +693,7 @@ a:active {
 
 .current_page_parent,
 .current_page_item {
-	background-color: #248089;
+	background-color: #248089; /* Antique Blue */
 }
 
 .current_page_parent a,
@@ -683,6 +722,7 @@ a:active {
 \*====================================*/
 
 .site-header {
+	background-color: white;
 }
 
 .pre-logo {
@@ -690,7 +730,7 @@ a:active {
 	font-weight: bold;
 	margin: 0 auto;
 	text-align: center;
-	margin-top: 10px;
+	padding-top: 10px;
 }
 
 .pre-logo__list {
@@ -719,7 +759,7 @@ a:active {
 
 .footer--details__list li {
 	display: block;
-	border-top: 2px solid rgb(140,171,170); /* Blue */
+	border-top: 2px solid #8CABAA; /* Sky Blue */
 	padding: 1em;
 	margin: 0 auto;
 	width: 80%;
@@ -733,16 +773,33 @@ a:active {
 	margin: 0;
 }
 
+.site-footer, .page-wrapper:after {
+	height: 74px;
+}
+
 .site-footer {
-	background-color: rgb(140,171,170); /* Blue */	
+	background-color: #8CABAA; /* Sky Blue */	
 	padding: 10px 0;
 	text-align: center;
 	color: #fff;
 	font-size: 12px; font-size: 1.2rem;
 	padding-top: 10px;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
+.site-footer__logo {
+	display: inline-block;
+	background: url('img/sewardcoop.svg') no-repeat;
+	background-size: 107px 29px;
+	width: 107px;
+	height: 29px;		
+}
 
+.copyright {
+	display: inline-block;
+	margin-bottom: 1em;
+}
 
 /*====================================*\
     #CONTENT ELEMENTS
@@ -770,7 +827,7 @@ a:active {
 
 .supplement:before,
 .supplement:after {
-    border-top: 2px solid #ac6749;
+    border-top: 2px solid #ac6749; /* medium cherrywood */
     content: "";
     display: inline-block;
     height: .1em;
@@ -787,7 +844,7 @@ a:active {
 }
 
 .slideshow__image {
-	background-color: rgb(140,171,170); /* Blue */
+	background-color: #8CABAA; /* Sky Blue */
 	position: relative;
 	background-size: cover;	
 	background-position: top center;
@@ -806,10 +863,10 @@ a:active {
 }
 
 .slideshow__caption-box {
-	border-top: 30px solid rgb(153,181,183); /* Lighter Blue */
-	border-bottom: 30px solid rgb(153,181,183); /* Lighter Blue */
-	background: url('img/pattern.png') repeat,
-				rgb(140,171,170); /* Lighter Blue */
+	border-top: 30px solid #8CABAA; /* Sky Blue */
+	border-bottom: 30px solid #8CABAA; /* Sky Blue */
+	background: url('img/pattern.png') repeat;
+	background-color: #8CABAA; /* Sky Blue */
 	padding: 20px 20px;
 	position: relative;
 	text-align: center;
@@ -836,46 +893,6 @@ a:active {
 	padding: 0;
 	color: #fff;
 	vertical-align: bottom;
-}
-
-.history__box {
-	position: relative;
-	text-align: center;
-}
-
-.history__image {
-	height: 300px;
-}
-
-.milkbottle {
-	position: absolute;
-	top: -40px;
-	left: 0;
-	right: 0;
-	opacity: 0.25;
-}
-
-.history__title {
-	text-transform: uppercase;
-	overflow: hidden;
-	text-align: center;
-	padding: 10px 0px;
-	display: inline-block;
-	border-top: 2px solid #ac6749;
-	border-bottom: 2px solid #ac6749;
-	position: absolute;
-	top: 3em;
-	left: 0;
-	right: 0;
-}
-
-.history__title h1 {
-	margin: 0;
-}
-
-
-.history__summary {
-	padding: 2em 0;
 }
 
 .menu__evening {
@@ -920,34 +937,6 @@ a:active {
 	padding-top: 20px;
 }
 
-.map-canvas {
-	display: block;
-	background-image: url(http://maps.googleapis.com/maps/api/staticmap?center=2600+E.+Franklin+Ave.+Minneapolis&zoom=15&scale=1&size=600x600&maptype=roadmap&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x000000%7Clabel:1%7C2600+E.+Franklin+Ave.+Minneapolis);
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	
-}
-
-.map-canvas img {
-	max-width: 100%;
-	opacity: 0;
-}
-
-	@media
-		only screen and (-webkit-min-device-pixel-ratio: 2),
-		only screen and (   min--moz-device-pixel-ratio: 2),
-		only screen and (     -o-min-device-pixel-ratio: 2/1),
-		only screen and (        min-device-pixel-ratio: 2),
-		only screen and (                min-resolution: 192dpi),
-		only screen and (                min-resolution: 2dppx) {
-		
-		.map-canvas {
-			background-image: url(http://maps.googleapis.com/maps/api/staticmap?center=2600+E.+Franklin+Ave.+Minneapolis&zoom=15&scale=1&size=600x600&maptype=roadmap&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x000000%7Clabel:1%7C2600+E.+Franklin+Ave.+Minneapolis);
-		}
-
-	}
-	
-	
 
  
 /*====================================*\
@@ -988,7 +977,7 @@ a:active {
 	}
 	
 	.site-nav__bottom {
-	  background-color: rgb(140,171,170); /* Blue */
+	  background-color: #8CABAA; /* Sky Blue */
 	  text-align: left;
 	}
   
@@ -1034,56 +1023,9 @@ a:active {
 		margin-right: 10px;
 	}
 		
-	.connect img {
-		height: 18px;
-		padding-left: 10px;
-		display: inline-block;
-	}
-
-
-	.history__image {
-		position: relative;
-		background: url('img/from-to.jpg') center center no-repeat;
-		background-size: cover;
-		height: 300px;
-		margin: 10px;
-	}
-
-	.history__image:after {
-		content: '';
-		position: absolute;
-		border: 2px solid #ac6749;
-		left: -10px;
-		right: -10px;
-		bottom: -10px;
-		top: -10px;
-	}
-	
-	.milkbottle {
-		opacity: 1;
-	}
-	
-	.history__title {
-		position:relative;
-		margin: 0 2em 1em 2em; /* Reset */
-	}
-		
     .oldie nav a {
         margin: 0 0.7%;
     }
-	
-	.site-footer {
-		text-align: left;
-	}
-
-	.site-footer__logo {
-		float: right;
-		background: url('img/sewardcoop.svg') no-repeat;
-		background-size: 107px 29px;
-		width: 107px;
-		height: 29px;		
-	}
-	
 	
 }
 
@@ -1092,10 +1034,6 @@ a:active {
 
 
 @media only screen and (min-width: 768px) {
-	
-	.main-content {
-		padding: 2.5em 0;
-	}
 	
 	.column,
 	.columns {
@@ -1148,7 +1086,7 @@ a:active {
 		width: 28%;
 		display: inline-block;
 		border: none; /* Reset */
-		border-left: 2px solid rgb(140,171,170); /* Blue */
+		border-left: 2px solid #8CABAA; /* Sky Blue */
 	}
 	
 		.footer--details__list li:first-child {
@@ -1156,7 +1094,15 @@ a:active {
 			border: none;
 		}
 	
-}
+	.site-footer {
+		text-align: left;
+	}
+	
+	.site-footer__logo {
+		float: right;
+	}
+
+	}
 
 
 /*	$960 Max Width                    */
@@ -1172,6 +1118,7 @@ a:active {
 		right: 0;
 		bottom: 0;
 		left: 0;
+		z-index: -1;
 	}
   
 }
@@ -1259,7 +1206,7 @@ input[type="button"] {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #EAA940;
+  background-color: #8CABAA; /* Sky Blue */
   border-radius: 4px;
   border: 1px solid #bbb;
   cursor: pointer;
@@ -1274,7 +1221,7 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
+  color: #fff;
   border-color: #888;
   outline: 0; }
 
