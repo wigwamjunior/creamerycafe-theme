@@ -24,12 +24,6 @@ Template Name: Map
 								<?php the_content(); ?>
 							</section>
 						</div>
-			
-						<!-- Supplement -->
-						<div class="two columns">		
-							<?php dynamic_sidebar( 'sidebar-1' ); ?>
-						</div>
-						<!-- END Supplement -->
 					</div>
 				
 				
@@ -42,7 +36,7 @@ Template Name: Map
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
-		
+	<?php get_sidebar(); ?>
 	</div>
 	<!-- END Container -->
 

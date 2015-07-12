@@ -44,7 +44,7 @@
 		<!-- End Logo -->
 
 		<!-- Header Nav -->
-		<div class="site-nav">
+		<div class="site-nav-bar">
 			<nav role="navigation">
 				<div class="site-nav__connect">
 					<div class="contact">
@@ -64,12 +64,20 @@
 						</ul>
 					</div>
 				</div>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'site-nav__links', ) ); ?>
+
+					<?php 
+					  wp_nav_menu(array(
+						'menu' => 'Primary Menu', 
+						'container_class' => 'site-nav',
+					  )); 
+					?>
+					
+					<!-- <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', ) ); ?> -->
 					
 					<!-- <?php wp_page_menu( array(
 						'depth' => 1,
 						'sort_column' => 'menu_order',
-						'menu_class' => 'site-nav__links',
+						'menu_class' => 'site-nav',
 						'exclude' => 10) );
 					?> -->
 

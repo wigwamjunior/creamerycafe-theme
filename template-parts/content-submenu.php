@@ -1,9 +1,7 @@
 <?php
-/**
- * The template used for displaying page content in page.php
- *
- * @package Co-op Creamery Cafe
- */
+/*
+Template Name: Has Children
+*/
 
 ?>
 
@@ -12,7 +10,7 @@
 	
 		<header>
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			<?php list_child_pages(); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'sub_menu', 'container' => 'nav', 'container_class' => 'inner-nav',) ); ?>
 		</header><!-- .entry-header -->
 		<div class="main-content row">
 		<div class="four columns">

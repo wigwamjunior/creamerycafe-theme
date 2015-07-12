@@ -1,8 +1,6 @@
 
 <?php get_header(); ?>
 
-<?php list_child_pages(); ?>
-
 	<div class="container" class="content-area">
 		<main role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -19,9 +17,7 @@
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
-		
 	</div>
 	<!-- END Container -->
 		
-
 <?php get_footer(); ?>

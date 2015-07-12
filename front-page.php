@@ -20,7 +20,6 @@ add_action( 'wp_enqueue_scripts', 'bxslider_load' );
 <?php get_header(); ?>
 
 	<!-- Main Content Area -->
-
 		<!-- Slideshow -->
 		<script>$(document).ready(function(){
 		$('.bxslider').bxSlider();});</script>
