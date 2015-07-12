@@ -29,7 +29,7 @@ Template Name: Menu
 					<div class="row">
 					
 						<!-- Menu Day -->
-						<div class="three columns">
+						<div class="three columns menu__wrapper">
 							<h2>Day</h2>
 							<?php 
 
@@ -139,7 +139,7 @@ Template Name: Menu
 						
 						
 						<!-- Menu Evening -->
-						<div class="three columns menu__evening">
+						<div class="three columns menu__wrapper">
 							<h2>Evening</h2>
 							<?php 
 

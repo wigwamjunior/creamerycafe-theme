@@ -44,7 +44,7 @@
 		<!-- End Logo -->
 
 		<!-- Header Nav -->
-		<div class="site-nav-bar">
+		<div class="site-nav-bar clearfix">
 			<nav role="navigation">
 				<div class="site-nav__connect">
 					<div class="contact">

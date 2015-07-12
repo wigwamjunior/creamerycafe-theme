@@ -159,8 +159,7 @@ echo $string;
  */
 function register_menu() {
   register_nav_menus( array(
-	'primary' => 'Primary Menu',
-	'sub_menu' => 'Sub Menu')
+	'primary' => 'Primary Menu')
 	);
 }
 add_action( 'init', 'register_menu' );
