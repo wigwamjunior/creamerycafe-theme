@@ -96,6 +96,12 @@ function creamerycafe_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+	
+	register_sidebar( array(
+		'name'          => esc_html__( 'Dining Menu' ),
+		'id'            => 'dining-menu',
+		'description'   => '',
+	) );
 }
 add_action( 'widgets_init', 'creamerycafe_widgets_init' );
 

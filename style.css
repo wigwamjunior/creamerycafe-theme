@@ -494,7 +494,7 @@ a:active {
 	max-width: 960px;
 	margin: 0 auto;
 	min-height: 100%;
-	margin-bottom: -84px;  /* equal to footer height */
+	margin-bottom: -104px;  /* equal to footer height */
 	background-color: #fffcf2;
 	-moz-box-shadow: 0 220px 40px rgba(0,0,0,0.15);
 		-webkit-box-shadow: 0 220px 40px rgba(0,0,0,0.15);
@@ -775,9 +775,9 @@ a:active {
 .footer--details__list li {
 	display: block;
 	border-top: 2px solid #8CABAA; /* Sky Blue */
-	padding: 1em;
+	padding: 1em 0px;
 	margin: 0 auto;
-	width: 80%;
+	width: 100%;
 }
 	
 .footer--details__list li:first-child {
@@ -789,7 +789,7 @@ a:active {
 }
 
 .site-footer, .page-wrapper:after {
-	height: 84px; /* must be equal to .page-wrapper margin-bottom */
+	height: 104px; /* must be equal to .page-wrapper margin-bottom */
 }
 
 .site-footer {
@@ -1086,7 +1086,12 @@ a:active {
 	}
 	
 	.column:first-child,
-	.columns:first-child {
+	.columns:first-child,
+	.two.columns:nth-of-type(4n),
+	.three.columns:nth-of-type(3n),
+	.four.columns:nth-of-type(even),
+	.five.columns:nth-of-type(even),
+	.six.columns:nth-of-type(even){
 		margin-left: 0;
 	}
 
@@ -1100,7 +1105,6 @@ a:active {
 	.one-third.column	{ width: 32%; }
 	.two-thirds.column	{ width: 66%; }
 	.one-half.column	{ width: 49%; }
-	
 
 	.pre-logo__list {
 		display: inline-block;
