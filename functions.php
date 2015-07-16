@@ -64,7 +64,7 @@ function creamerycafe_setup() {
 		'link',
 	) );
 
-	
+
 }
 endif; // creamerycafe_setup
 add_action( 'after_setup_theme', 'creamerycafe_setup' );
@@ -233,7 +233,17 @@ class CSS_Menu_Walker extends Walker {
   function end_el( &$output, $item, $depth = 0, $args = array() ) {
     $output .= "</li>\n";
   }
-} 
+}
+
+
+/**
+ * Allow Tinymce special characters
+ */
+function Tinymce_settings($in) {
+    $in['entity_encoding']= 'named'; // numeric/raw
+    return $in;
+}
+
 
 /**
  * Remove welcome panel.

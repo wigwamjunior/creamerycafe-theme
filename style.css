@@ -409,7 +409,33 @@ nav a{
 }
 
 blockquote {
-	margin: 0 1.5em;
+	padding: .5em .5em;
+	quotes: "\201C""\201D";
+	position: relative;
+}
+
+blockquote p{
+	color: #97411B;
+	padding-left: 2em;
+	margin: 0;
+	font-size: 1em;
+}
+
+blockquote:before {
+	color: #97411B;
+	content: open-quote;
+	font-size: 4em;
+	line-height: .1em;
+	margin-right: 0;
+	vertical-align: -.8em;
+	position: absolute;
+	top: .5em;
+}
+
+blockquote p:last-child {
+	color: #444;
+	font-size: .8em;
+	margin: 1em 0 0 0;
 }
 
 address {
