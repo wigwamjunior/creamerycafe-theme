@@ -67,7 +67,7 @@
 
 					<?php 
 					  wp_nav_menu(array(
-						'menu' => 'Primary Menu', 
+						'theme_location' => 'primary', 
 						'container_class' => 'site-nav',
 					  )); 
 					?>

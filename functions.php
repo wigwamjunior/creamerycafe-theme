@@ -115,6 +115,11 @@ function creamerycafe_scripts() {
 	wp_enqueue_script( 'creamerycafe-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'creamerycafe-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	
+	if (is_page(16)) {
+		wp_enqueue_script( 'tabs-navigation', get_template_directory_uri() . '/js/main.js', array(), '20150719', true );
+	}
+	
 
 	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Bitter');
 	wp_enqueue_style( 'googleFonts');
@@ -161,15 +166,25 @@ echo $string;
 }
 
 /**
- * Setup menus.
+ * Setup primary pages menu.
  */
-function register_menu() {
+function register_primary_menu() {
   register_nav_menus( array(
 	'primary' => 'Primary Menu')
 	);
 }
-add_action( 'init', 'register_menu' );
+add_action( 'init', 'register_primary_menu' );
 
+
+/**
+ * Setup sub-pages menu.
+ */
+function register_subpages_menu() {
+  register_nav_menus( array(
+	'subpages' => 'Sub-pages Menu')
+	);
+}
+add_action( 'init', 'register_subpages_menu' );
 
 /**
  * Setup sub menus.

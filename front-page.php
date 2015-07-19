@@ -41,8 +41,8 @@ add_action( 'wp_enqueue_scripts', 'bxslider_load' );
 			?>
 		</ul>
 		<div class="slideshow__caption-box clearfix">
-			<h1 class="slideshow__title">Welcome to the Co-op Creamery Cafe</h1>
-			<p class="slideshow__copy">Specializing in carefully crafted dishes from locally sourced ingredients. A café from Seward Community Co-op</p>
+			<h1 class="slideshow__title"><?php the_field('intro_headline'); ?></h1>
+			<p class="slideshow__copy"><?php the_field('intro_paragraph'); ?></p>
 		</div>
 		<!-- End Slideshow -->
 		
@@ -54,18 +54,15 @@ add_action( 'wp_enqueue_scripts', 'bxslider_load' );
 				<ul class="footer--details__list">
 					<li>
 						<h3 class="uppercase">Hours</h3>
-						<p>Daily: 7 a.m. – 10 p.m.<br>
-						(8 a.m. Sat.-Sun.)</p>
+						<?php the_field('hours'); ?>
 					</li>
 					<li>
 						<h3 class="uppercase">Contact</h3>
-						<p>612-555-5855<br>
-						or Send Us a Note!</p>
+						<?php the_field('contact'); ?>
 					</li>
 					<li>
 						<h3 class="uppercase">Location</h3>
-						<p>2601 E. Franklin Ave.<br>
-							Minneapolis, MN 55406</p>
+						<?php the_field('location'); ?>
 					</li>
 				</ul>
 				

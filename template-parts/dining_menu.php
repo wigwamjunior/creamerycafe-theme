@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Menu
+Template Name: Menu Original
 */
 ?>
 

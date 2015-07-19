@@ -659,15 +659,14 @@ a:active {
 
 .inner-nav {
 	position: relative;
-	line-height: 24px;
 	display: block;
+	margin-bottom: 1em;
 }
 
 .inner-nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	display: block;
 }
 
 .inner-nav ul li {
@@ -676,6 +675,7 @@ a:active {
 	position: relative;
 	line-height: 16px;
 	display: block;
+	background-color: #FFFCF2; /*pale ivory*/
 }
 
 .inner-nav ul li a{
@@ -708,12 +708,32 @@ a:active {
 .inner-nav:after {
 	border-top: 2px solid #ac6749; /* medium cherrywood */
 	content: "";
-	display: inline-block;
-	height: .1em;
+	display: block;
 	position: relative;
-	vertical-align: middle;
 	width: 100%;
-	margin-bottom: .15em;
+}
+
+.tabs {
+	margin: 0;
+	padding: 1em 0;
+}
+
+.tabs li {
+	list-style:none;
+	display:inline;
+}
+
+.tabs a {
+	padding:5px 10px;
+	display:inline-block;
+	background:#666;
+	color:#fff;
+	text-decoration:none;
+}
+
+.tabs a.active {
+	background:#fff;
+	color:#000;
 }
 
 .contact {
@@ -1048,8 +1068,21 @@ a:active {
 	}
 
 	.inner-nav ul li {
-		padding: 0 10px;
+		padding: 10px;
 		display: inline-block;
+	}
+	
+	.inner-nav ul li:after {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 0;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		top: 38px;
+		left: 50%;
+		margin-left: -10px;
 	}
 	
 	.inner-nav ul li:first-child {
@@ -1059,19 +1092,20 @@ a:active {
 	.inner-nav ul li a {
 		text-decoration: none;
 	}
-	
-	.inner-nav ul li a:hover .inner-nav ul li:hover:after{
-		font-size: 1.6rem;
-		line-height: 16px;
-		display: block;
-		position: relative;
-	}
 
 	.inner-nav li.current_page_item {
 		padding-left: 10px; /* reset */
 	}
 	
-	.inner-nav ul li:hover:after, .inner-nav li.current_page_item:after {
+	.inner-nav ul li:hover:after {
+		border-top: 10px solid #ac6749;
+		-moz-transition: border-top-color .2s;
+		-ms-transition: border-top-color .2s;
+		-o-transition: border-top-color .2s;
+		transition: border-width .2s;
+	}
+	
+	.inner-nav li.current_page_item:after {
 		content: '';
 		position: absolute;
 		display: block;
@@ -1080,11 +1114,15 @@ a:active {
 		border-left: 10px solid transparent;
 		border-right: 10px solid transparent;
 		border-top: 10px solid #ac6749;
-		top: 34px;
+		top: 38px;
 		left: 50%;
 		margin-left: -10px;
 	}
 
+	.slideshow__caption-box {
+		padding: 20px 4em;
+	}
+	
 	.site-footer, .page-wrapper:after {
 		height: 54px; /* must be equal to .page-wrapper margin-bottom */
 	}

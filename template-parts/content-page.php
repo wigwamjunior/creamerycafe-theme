@@ -12,7 +12,21 @@
 	
 	<header>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php list_child_pages(); ?>
+		
+		<?php
+			$children = get_pages('child_of='.$post->ID);
+			if ( count( $children ) != 0 ) {
+
+				  wp_nav_menu(array(
+					'theme_location' => 'subpages',
+					'container' => 'nav',
+					'container_class' => 'inner-nav',)
+					);
+
+		 }
+			else;
+		?>
+		
 	</header><!-- .entry-header -->
 	<div class="main-content row">
 		<div class="four columns">
