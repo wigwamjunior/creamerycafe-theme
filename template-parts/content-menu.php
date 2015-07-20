@@ -8,14 +8,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php creamerycafe_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+	<header class="entry-header">
+		<!-- get the food group name -->
+		<?php the_title( sprintf( '<h4 class="entry-title">', esc_url( get_permalink() ) ), '</h4>' ); ?> 
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -36,23 +32,15 @@
 
 						// display each item
 						?>
-						
 						<div class="two columns">
-							<strong class="menu__item-name"><?php the_sub_field('item_name'); ?></strong>
-							<p class="menu__item-copy"><?php the_sub_field('item_description'); ?></p>
-							<span class="menu__item-price"><?php the_sub_field('item_price'); ?></span>
+							<span class="food__item-name"><?php the_sub_field('item_name'); ?></span>
+							<p class="food__item-copy"><?php the_sub_field('item_description'); ?></p>
+							<span class="food__item-price"><?php the_sub_field('item_price'); ?></span>
 						</div>
 					<?php endwhile; ?>
 				</div>
 			<?php endif; ?>
-		
-		
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'creamerycafe' ),
-				'after'  => '</div>',
-			) );
-		?>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

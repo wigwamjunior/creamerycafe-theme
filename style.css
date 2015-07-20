@@ -290,7 +290,7 @@ html {
 }
 
 body {
-    font-size: 18px; font-size: 1.8rem;
+    font-size: 16px; font-size: 1.6rem;
 	line-height: 1.5;
 	font-weight: 400;
 	font-family: "Bitter", "proxima-nova", Arial, sans-serif;
@@ -394,8 +394,7 @@ ol ul {
   
 
 nav a{
-	font-family: proxima-nova; 
-	letter-spacing: 0.1em;
+	font-family: 'proxima-nova'; 
 	text-decoration: none;
 	margin: 0;
 	padding: 0;
@@ -506,6 +505,14 @@ a:focus {
 a:hover,
 a:active {
 	outline: 0;
+}
+
+h4.entry-title {
+	margin: 1.5em 0 .25em 0;
+}
+
+p:first-child {
+	margin-top: .25em;
 }
 
 /*====================================*\
@@ -684,6 +691,9 @@ a:active {
 	line-height: 16px;
 	display: block;
 	position: relative;
+	font-family: 'proxima-nova';
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 .inner-nav li.current_page_item {
@@ -946,48 +956,23 @@ a:active {
 	vertical-align: bottom;
 }
 
-.menu__wrapper {
-	position: relative;
+.menu__hours {
+	font-size: 14px;
+	letter-spacing: 0px;
 }
 
-.menu__wrapper:after {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 102%;
-	border: 1px solid red;
-	top: -10px;
-	left: -10px;
-}
-
-.menu__evening {
-	position: relative;
-	z-index: 99;
-}
-
-.menu__evening:after {
-  content: '';
-  position: absolute;
-  background-color: #f5edd0;
-  top: -10px;
-  z-index: -1;
-  bottom: -10px;
-  padding-top: 30px;
-  left: -4%;
-  right: -30px;
-}
-
-.menu__item-name {
+.food__item-name {
 	font-family: 'proxima-nova';
 	font-size: 14px; font-size: .9em;
 	text-transform: uppercase;
+	color: #244E5A;
 }
 
-.menu__item-copy {
+.food__item-copy {
 	margin: 0;
 }
 
-.menu__item-price {
+.food__item-price {
 	margin: 0 2em 2em 0;
 	float: right;
 	font-size: 12px; font-size: .8em;
@@ -1105,7 +1090,7 @@ a:active {
 		transition: border-width .2s;
 	}
 	
-	.inner-nav li.current_page_item:after {
+	.inner-nav li.current_page_item:after, .active:after {
 		content: '';
 		position: absolute;
 		display: block;

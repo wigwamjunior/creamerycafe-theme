@@ -12,10 +12,10 @@
 	
 	<header>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		
+			
 		<?php
 			$children = get_pages('child_of='.$post->ID);
-			if ( count( $children ) != 0 ) {
+			if ( count( $children ) != 0 or $post->post_parent) {
 
 				  wp_nav_menu(array(
 					'theme_location' => 'subpages',
