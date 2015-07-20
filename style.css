@@ -694,10 +694,23 @@ p:first-child {
 	font-family: 'proxima-nova';
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	color: #8CABAA; /* Sky Blue */
+}
+
+.inner-nav ul li a:visited {
+	color: #8CABAA; /* Sky Blue */
+}
+
+.inner-nav ul li a:hover{
+	color: #244E5A; /* Deep Blue */
 }
 
 .inner-nav li.current_page_item {
 	padding-left: 20px;
+}
+
+.inner-nav ul li.current_page_item > a, .inner-nav ul li.active > a {
+	color: #244E5A; /* Deep Blue */
 }
 
 .inner-nav li.current_page_item:after {
@@ -721,29 +734,6 @@ p:first-child {
 	display: block;
 	position: relative;
 	width: 100%;
-}
-
-.tabs {
-	margin: 0;
-	padding: 1em 0;
-}
-
-.tabs li {
-	list-style:none;
-	display:inline;
-}
-
-.tabs a {
-	padding:5px 10px;
-	display:inline-block;
-	background:#666;
-	color:#fff;
-	text-decoration:none;
-}
-
-.tabs a.active {
-	background:#fff;
-	color:#000;
 }
 
 .contact {
