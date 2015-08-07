@@ -26,9 +26,9 @@ Template Name: Menu
 
 		<nav class="inner-nav">
 			<ul>
-				<li><a href="#tab1">Day <span class="menu__hours">(8 a.m. to 4 p.m.)</span></a></li> <!-- Tabs correspond to categories that food group posts live in -->
-				<li><a href="#tab2">Evening <span class="menu__hours">(4 p.m. to close)</span></a></li> <!-- Tabs correspond to categories that food group posts live in -->
-				<li><a href="#tab3">Beverages</a></li> <!-- Tabs correspond to categories that food group posts live in -->
+				<li><a href="#tab1">Day</a></li> <!-- Tabs correspond to categories that food group posts live in -->
+				<li><a href="#tab2">In Between <span class="menu__hours">(3 to 5 p.m.)</span></a></li> <!-- Tabs correspond to categories that food group posts live in -->
+				<li><a href="#tab3">Evening <span class="menu__hours">(5 to 7 p.m.)</span></a></li> <!-- Tabs correspond to categories that food group posts live in -->
 			</ul>
 		</nav>
 		
@@ -57,9 +57,9 @@ Template Name: Menu
 		
 		<div id="tab2">
 			
-			<!-- Find the posts associated with the 'Day' category and display -->
+			<!-- Find the posts associated with the 'In Between' category and display -->
 			<?php
-				$loop = new WP_Query( array( 'post_type' => 'food_group', 'posts_per_page' => 20, 'category_name' => 'evening' ) );
+				$loop = new WP_Query( array( 'post_type' => 'food_group', 'posts_per_page' => 20, 'category_name' => 'in-between' ) );
 				while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				
 				<?php
@@ -80,9 +80,9 @@ Template Name: Menu
 		
 		<div id="tab3">
 			
-			<!-- Find the posts associated with the 'Day' category and display -->
+			<!-- Find the posts associated with the 'Evening' category and display -->
 			<?php
-				$loop = new WP_Query( array( 'post_type' => 'food_group', 'posts_per_page' => 20, 'category_name' => 'beverages' ) );
+				$loop = new WP_Query( array( 'post_type' => 'food_group', 'posts_per_page' => 20, 'category_name' => 'evening' ) );
 				while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				
 				<?php
