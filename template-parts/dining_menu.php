@@ -26,10 +26,12 @@ Template Name: Menu
 
 		<nav class="inner-nav">
 			<ul>
-				<li><a href="#tab1">Day</a></li> <!-- Tabs correspond to categories that food group posts live in -->
-				<li><a href="#tab2">In Between <span class="menu__hours">(3 to 5 p.m.)</span></a></li> <!-- Tabs correspond to categories that food group posts live in -->
-				<li><a href="#tab3">Evening <span class="menu__hours">(5 to 10 p.m.)</span></a></li> <!-- Tabs correspond to categories that food group posts live in -->
-			</ul><li><a href="#tab4">Kid's Menu</a></li> <!-- Tabs correspond to categories that food group posts live in -->
+                <!-- Tabs correspond to categories that food group posts live in -->
+				<li><a href="#tab1">Day</a></li> 
+				<li><a href="#tab2">In Between <span class="menu__hours">(3 to 5 p.m.)</span></a></li>
+				<li><a href="#tab3">Evening <span class="menu__hours">(5 to 10 p.m.)</span></a></li>
+                <li><a href="#tab4">Kid's Menu</a></li>
+			</ul>
 		</nav>
 		
         <!-- Day Menu Tab -->

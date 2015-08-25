@@ -76,16 +76,6 @@
 						'container_class' => 'site-nav',
 					  )); 
 					?>
-					
-					<!-- <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', ) ); ?> -->
-					
-					<!-- <?php wp_page_menu( array(
-						'depth' => 1,
-						'sort_column' => 'menu_order',
-						'menu_class' => 'site-nav',
-						'exclude' => 10) );
-					?> -->
-
 			</nav>
 		</div>
 

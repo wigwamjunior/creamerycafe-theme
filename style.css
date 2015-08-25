@@ -515,6 +515,17 @@ p:first-child {
 	margin-top: .25em;
 }
 
+figure {
+    margin: 0;
+}
+
+figcaption {
+	margin-top: 10px;
+	color: #97411B; /* Cherrywood */
+	text-align: right;
+	font-size: 13px; font-size: 1.3rem;
+}
+
 /*====================================*\
     #GENERAL STRUCTURE 
 \*====================================*/
@@ -569,7 +580,9 @@ p:first-child {
 }
 
 .site-logo img {
-	background: url('img/logoh.svg') no-repeat;
+	background: url('img/logo-h.png');
+	background: url('img/logoh.svg') no-repeat,
+		linear-gradient(transparent, transparent);
 	max-width: 300px;
 	width: 90%;
 	height: 23.485px;
@@ -667,7 +680,7 @@ p:first-child {
 .inner-nav {
 	position: relative;
 	display: block;
-	margin-bottom: 1em;
+	margin-bottom: 3em;
 }
 
 .inner-nav ul {
@@ -705,15 +718,15 @@ p:first-child {
 	color: #244E5A; /* Deep Blue */
 }
 
-.inner-nav li.current_page_item {
+.inner-nav li.current_page_item, .inner-nav li.tab__active {
 	padding-left: 20px;
 }
 
-.inner-nav ul li.current_page_item > a, .inner-nav ul li.active > a {
+.inner-nav ul li.current_page_item > a, .inner-nav ul li.tab__active > a {
 	color: #244E5A; /* Deep Blue */
 }
 
-.inner-nav li.current_page_item:after {
+.inner-nav li.current_page_item:after, .inner-nav li.tab__active:after {
 	content: '';
 	position: absolute;
 	display: block;
@@ -753,7 +766,7 @@ p:first-child {
 }
 
 .contact a:hover,
-.contact a.active {
+.contact a:active {
 	background: #244E5A;
 	-webkit-transition: background-color .2s;
 	-moz-transition: background-color .2s;
@@ -951,6 +964,11 @@ p:first-child {
 	letter-spacing: 0px;
 }
 
+.food__item {
+	height: 130px;
+	overflow: hidden;
+}
+
 .food__item-name {
 	font-family: 'proxima-nova';
 	font-size: 14px; font-size: .9em;
@@ -977,6 +995,13 @@ p:first-child {
 	padding-top: 20px;
 }
 
+/* hack to style the google map widget labels */
+.map-label {
+	text-align: center;
+    font-size: 14px;
+    color: #97411B;
+    text-shadow: 1px 1px 3px #fff;
+}
 
  
 /*====================================*\
@@ -995,7 +1020,9 @@ p:first-child {
  @media only screen and (min-width: 480px) {
  
 	.site-logo img {
-		background: url('img/logoh@2x.svg') no-repeat;
+		background: url('img/logoh@2x.png') no-repeat;
+		background: url('img/logoh@2x.svg') no-repeat,
+			linear-gradient(transparent, transparent);
 		max-width: 600px;
 		height: 93px;
 		margin: 44px auto;
@@ -1080,7 +1107,7 @@ p:first-child {
 		transition: border-width .2s;
 	}
 	
-	.inner-nav li.current_page_item:after, .active:after {
+	.inner-nav li.current_page_item:after, .tab__active:after {
 		content: '';
 		position: absolute;
 		display: block;

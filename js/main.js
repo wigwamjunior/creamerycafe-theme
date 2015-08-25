@@ -8,7 +8,7 @@ jQuery(document).ready(function() {
 		// If no match is found, use the first link as the initial active tab.
 		active = jQuery(links.filter('[href="'+location.hash+'"]')[0] || links[0]);
 		active.addClass('active');
-		active.parents('li').addClass('active');
+		active.parents('li').addClass('tab__active');
 		content = jQuery(active[0].hash);
 
 		// Hide the remaining content
@@ -20,7 +20,7 @@ jQuery(document).ready(function() {
 		jQuery(this).on('click', 'a', function(e){
 		  // Make the old tab inactive.
 		  active.removeClass('active');
-		  active.parents('li').removeClass('active');
+		  active.parents('li').removeClass('tab__active');
 		  content.hide();
 
 		  // Update the variables with the new link and content
@@ -29,7 +29,7 @@ jQuery(document).ready(function() {
 
 		  // Make the tab active.
 		  active.addClass('active');
-		  active.parents('li').addClass('active');
+		  active.parents('li').addClass('tab__active');
 		  content.show();
 
 		  // Prevent the anchor's default click action
